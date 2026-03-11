@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Estilo - Grupo LF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #0d1b2a;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0d1b2a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #00e676;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .color-box {
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .color-name {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .color-code {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .bg-primary {
+            background: #00e676;
+            color: #0d1b2a;
+        }
+        
+        .bg-secondary {
+            background: #1e4a8a;
+            color: white;
+        }
+        
+        .bg-dark {
+            background: #0d1b2a;
+            color: white;
+        }
+        
+        .bg-dark-light {
+            background: #1a2f4e;
+            color: white;
+        }
+        
+        .bg-blue-medium {
+            background: #1e3a5f;
+            color: white;
+        }
+        
+        .bg-gold {
+            background: #ffd700;
+            color: #0d1b2a;
+        }
+        
+        .bg-white {
+            background: #ffffff;
+            color: #0d1b2a;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .bg-light-gray {
+            background: #f0f4f8;
+            color: #0d1b2a;
+        }
+        
+        .typo-grid {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .typo-sample {
+            padding: 20px;
+            border-left: 4px solid #00e676;
+            background: #f9f9f9;
+        }
+        
+        .typo-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .h1-sample {
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #0d1b2a;
+        }
+        
+        .h2-sample {
+            font-size: 42px;
+            font-weight: 900;
+            color: #0d1b2a;
+        }
+        
+        .h3-sample {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0d1b2a;
+        }
+        
+        .body-sample {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background: #00e676;
+            color: #0d1b2a;
+        }
+        
+        .btn-primary:hover {
+            background: #00c853;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #0d1b2a;
+            border-color: #0d1b2a;
+        }
+        
+        .btn-outline:hover {
+            background: #0d1b2a;
+            color: white;
+        }
+        
+        .component-box {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .logo-preview {
+            background: #0d1b2a;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .logo-text {
+            font-size: 48px;
+            font-weight: 900;
+            color: white;
+            letter-spacing: 3px;
+        }
+        
+        .logo-tagline {
+            font-size: 12px;
+            font-weight: 600;
+            color: #ffd700;
+            letter-spacing: 4px;
+            margin-top: 5px;
+        }
+        
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #00e676;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        
+        .info-box strong {
+            color: #0d1b2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Guia de Estilo Visual</h1>
+        <p class="subtitle">Grupo LF - Segurança Classe A | Versão 1.0</p>
+        
+        <!-- Logo Section -->
+        <div class="section">
+            <h2 class="section-title">Logotipo</h2>
+            <div class="logo-preview">
+                <div class="logo-text">GRUPO LF</div>
+                <div class="logo-tagline">SEGURANÇA CLASSE A</div>
+            </div>
+        </div>
+        
+        <!-- Colors Section -->
+        <div class="section">
+            <h2 class="section-title">Paleta de Cores</h2>
+            <div class="color-grid">
+                <div class="color-box bg-primary">
+                    <div class="color-name">Primary (Verde Neon)</div>
+                    <div class="color-code">#00e676</div>
+                </div>
+                <div class="color-box bg-secondary">
+                    <div class="color-name">Secondary (Azul)</div>
+                    <div class="color-code">#1e4a8a</div>
+                </div>
+                <div class="color-box bg-dark">
+                    <div class="color-name">Dark (Azul Escuro)</div>
+                    <div class="color-code">#0d1b2a</div>
+                </div>
+                <div class="color-box bg-dark-light">
+                    <div class="color-name">Dark Light</div>
+                    <div class="color-code">#1a2f4e</div>
+                </div>
+                <div class="color-box bg-blue-medium">
+                    <div class="color-name">Blue Medium</div>
+                    <div class="color-code">#1e3a5f</div>
+                </div>
+                <div class="color-box bg-gold">
+                    <div class="color-name">Gold (Dourado)</div>
+                    <div class="color-code">#ffd700</div>
+                </div>
+                <div class="color-box bg-white">
+                    <div class="color-name">White</div>
+                    <div class="color-code">#ffffff</div>
+                </div>
+                <div class="color-box bg-light-gray">
+                    <div class="color-name">Light Gray</div>
+                    <div class="color-code">#f0f4f8</div>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <strong>Uso das Cores:</strong><br>
+                • Verde Neon (#00e676) - CTAs, destaques, elementos interativos<br>
+                • Azul Escuro (#0d1b2a) - Backgrounds, header, footer<br>
+                • Dourado (#ffd700) - Taglines, badges especiais<br>
+                • Cinza Claro (#f0f4f8) - Backgrounds de seções alternadas
+            </div>
+        </div>
+        
+        <!-- Typography Section -->
+        <div class="section">
+            <h2 class="section-title">Tipografia</h2>
+            <div class="info-box">
+                <strong>Fonte Principal:</strong> Inter (Google Fonts)<br>
+                <strong>Pesos Utilizados:</strong> 300, 400, 500, 600, 700, 800, 900
+            </div>
+            
+            <div class="typo-grid">
+                <div class="typo-sample">
+                    <div class="typo-label">Heading 1 (Hero Title)</div>
+                    <div class="h1-sample">Segurança privada profissional</div>
+                </div>
+                <div class="typo-sample">
+                    <div class="typo-label">Heading 2 (Section Title)</div>
+                    <div class="h2-sample">Por que escolher o Grupo LF?</div>
+                </div>
+                <div class="typo-sample">
+                    <div class="typo-label">Heading 3 (Card Title)</div>
+                    <div class="h3-sample">Vigilância Armada</div>
+                </div>
+                <div class="typo-sample">
+                    <div class="typo-label">Body Text (Paragraph)</div>
+                    <div class="body-sample">
+                        Há 15 anos no mercado, o Grupo LF nasceu com a missão de elevar os padrões dos serviços de segurança privada em Pernambuco. Atuamos com profissionalismo, presença e ética.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Buttons Section -->
+        <div class="section">
+            <h2 class="section-title">Botões</h2>
+            <div class="component-box">
+                <div class="button-grid">
+                    <a href="#" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        Botão Primário
+                    </a>
+                    <a href="#" class="btn btn-outline">Botão Outline</a>
+                </div>
+                
+                <div class="info-box" style="margin-top: 30px;">
+                    <strong>Especificações:</strong><br>
+                    • Primário: Verde neon com texto escuro<br>
+                    • Outline: Borda escura com texto escuro<br>
+                    • Hover: Elevação + mudança de cor<br>
+                    • Border-radius: 6px<br>
+                    • Padding: 14px 28px
+                </div>
+            </div>
+        </div>
+        
+        <!-- Icons Section -->
+        <div class="section">
+            <h2 class="section-title">Ícones e Elementos Visuais</h2>
+            <div class="info-box">
+                <strong>Formato:</strong> SVG inline (sem requisições externas)<br>
+                <strong>Estilo:</strong> Minimalista, outline, stroke-width 2-3px<br>
+                <strong>Cores:</strong> Azul (#1e4a8a) e Verde (#00e676)<br>
+                <strong>Animações:</strong> Fade-in ao scroll, pulse no WhatsApp button
+            </div>
+        </div>
+        
+        <!-- Spacing Section -->
+        <div class="section">
+            <h2 class="section-title">Espaçamentos</h2>
+            <div class="info-box">
+                <strong>Sistema de Espaçamento:</strong><br>
+                • xs: 8px<br>
+                • sm: 16px<br>
+                • md: 24px<br>
+                • lg: 32px<br>
+                • xl: 48px<br>
+                • 2xl: 64px<br>
+                • 3xl: 80px (padding vertical de seções)
+            </div>
+        </div>
+        
+        <!-- Border Radius Section -->
+        <div class="section">
+            <h2 class="section-title">Border Radius</h2>
+            <div class="info-box">
+                <strong>Tamanhos:</strong><br>
+                • Small: 6px (botões)<br>
+                • Medium: 12px (cards)<br>
+                • Large: 16px (containers grandes)<br>
+                • Circle: 50% (botão WhatsApp, badges)
+            </div>
+        </div>
+        
+        <!-- Shadows Section -->
+        <div class="section">
+            <h2 class="section-title">Sombras</h2>
+            <div class="info-box">
+                <strong>Níveis de Elevação:</strong><br>
+                • Small: 0 2px 8px rgba(0,0,0,0.1) - Cards padrão<br>
+                • Medium: 0 4px 16px rgba(0,0,0,0.15) - Cards hover<br>
+                • Large: 0 8px 32px rgba(0,0,0,0.2) - Modais, dropdowns<br>
+                • Special: 0 4px 20px rgba(0,230,118,0.3) - Elementos com primary color
+            </div>
+        </div>
+        
+        <!-- Footer Info -->
+        <div class="section">
+            <h2 class="section-title">Informações do Projeto</h2>
+            <div class="info-box">
+                <strong>Cliente:</strong> Grupo LF - Vigilância e Segurança Ltda<br>
+                <strong>CNPJ:</strong> 47.047.930/0001-64<br>
+                <strong>Versão:</strong> 1.0.0<br>
+                <strong>Data:</strong> Março de 2025<br>
+                <strong>Status:</strong> ✅ Concluído<br>
+                <strong>Tecnologias:</strong> HTML5, CSS3, JavaScript ES6+<br>
+                <strong>Fonte:</strong> Inter (Google Fonts)
+            </div>
+        </div>
+    </div>
+</body>
+</html>
