@@ -9,17 +9,18 @@
 
 :root {
     /* Colors */
-    --color-primary: #00e676;
-    --color-primary-dark: #00c853;
+    :root {
+    --color-primary: #d4af37;
+    --color-primary-dark: #b08a1e;
     --color-secondary: #1e4a8a;
     --color-dark: #0d1b2a;
     --color-dark-light: #1a2f4e;
     --color-blue-medium: #1e3a5f;
-    --color-gold: #ffd700;
+    --color-gold: #d4af37;
     --color-white: #ffffff;
     --color-light-gray: #f0f4f8;
     --color-text-light: #e8f0f7;
-    
+}
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     
